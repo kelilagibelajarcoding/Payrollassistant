@@ -1,0 +1,164 @@
+<!DOCTYPE html> 
+ <html> 
+     <head>  
+    <title>Payroll Assistant</title>  
+    <link rel="stylesheet" href="style.css">  
+</head>
+  <body> 
+     <!-- LOGIN -->  
+<h1>Payroll Assistant</h1>  
+<p>Manage employee payroll easily</p>
+
+<!-- LOGIN AREA --> 
+  <div id="loginPage"> 
+     <div class="login-card">  
+
+    <div class="login-icon">HI</div>  
+
+    <h2>Welcome Back!</h2>  
+
+    <p class="login-subtitle">  
+        Login to manage your payroll  
+    </p>  
+
+    <label>Username</label>  
+    <input  
+        type="text"  
+        id="username"  
+        placeholder="Enter username"  
+    >  
+
+    <label>Password</label>  
+    <input  
+        type="password"  
+        id="password"  
+        placeholder="Enter password"  
+    >  
+
+    <p id="loginError"></p>  
+
+    <button onclick="login()">Login</button>  
+
+</div>
+
+</div> 
+ <!-- DASHBOARD -->  
+<section id="dashboard"
+ style="display: none;">  
+
+    <h1>Payroll Dashboard</h1>  
+
+    <p>Welcome to Payroll Assistant</p>  
+
+    <button onclick="showPayroll()">Payroll Calculator</button>  
+
+    <div class="dashboard-cards">  
+
+<div class="dashboard-card">  
+    <div class="card-icon">👥</div>  
+    <h3>Employees</h3>  
+    <p>Manage employee payroll</p>  
+</div>  
+
+<div class="dashboard-card">  
+    <div class="card-icon">💰</div>  
+    <h3>Payroll</h3>  
+    <p>Calculate employee salary</p>  
+</div>  
+
+<div class="dashboard-card">  
+    <div class="card-icon">📊</div>  
+    <h3>Reports</h3>  
+    <p>View payroll summary</p>  
+</div>
+
+</div>  
+<!-- PAYROLL CALCULATOR -->  
+    <div id="payroll" style="display: none;">  
+
+        <h2>Payroll Calculator</h2>  
+
+        <label>Employee Name</label>  
+        <br>  
+        <input type="text" id="employeeName">  
+
+        <br><br>  
+
+        <label>Basic Salary</label>  
+        <br>  
+        <input type="number" id="basicSalary">  
+
+        <br><br>  
+
+        <label>Transport Allowance</label>  
+        <br>  
+        <input type="number" id="transport">  
+
+        <br><br>  
+
+        <label>Meal Allowance</label>  
+        <br>  
+        <input type="number" id="meal">  
+
+        <br><br>  
+
+        <label>Bonus</label>  
+        <br>  
+        <input type="number" id="bonus">  
+
+        <br><br>  
+
+        <label>Insurance</label>  
+        <br>  
+        <input type="number" id="insurance">  
+
+        <br><br>  
+
+        <label>Other Deduction</label>  
+        <br>  
+        <input type="number" id="otherDeduction">  
+
+        <br><br>  
+
+
+        <button onclick="calculatePayroll()">Calculate Salary</button>  
+
+        <button onclick="resetPayroll()"  
+        class="reset-button">  
+            Reset  
+        </button>      
+
+        <!-- PAYROLL RESULT -->
+<div id="result">
+
+    <h2>Payroll Result</h2>
+
+    <p>
+        Gross Salary:
+        <strong id="grossSalary">Rp 0</strong>
+    </p>
+
+    <p>
+        PPh 21:
+        <strong id="pph21Result">Rp 0</strong>
+    </p>
+
+    <p>
+        Total Deduction:
+        <strong id="totalDeduction">Rp 0</strong>
+    </p>
+
+    <h2>
+        Net Salary:
+        <span id="netSalary">Rp 0</span>
+    </h2>
+
+</div>
+
+</section>  
+
+
+<!-- JAVASCRIPT -->  
+<script src="script.js"></script>
+
+</body>  </html>
